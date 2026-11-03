@@ -109,6 +109,12 @@
     <Compile Include="frmDevoluciones.Designer.cs">
       <DependentUpon>frmDevoluciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGaleriaVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGaleriaVehiculos.Designer.cs">
+      <DependentUpon>frmGaleriaVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDevoluciones.resx">
       <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGaleriaVehiculos.resx">
+      <DependentUpon>frmGaleriaVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
