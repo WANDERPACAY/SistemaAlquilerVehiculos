@@ -48,7 +48,25 @@
             this.cmbTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbTransmision = new System.Windows.Forms.ComboBox();
+            this.picVehiculo = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmbFiltroTipo = new System.Windows.Forms.ComboBox();
+            this.cmbFiltroTransmision = new System.Windows.Forms.ComboBox();
+            this.btnMostrarTodos = new System.Windows.Forms.Button();
+            this.dgvVehiculos = new System.Windows.Forms.DataGridView();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.grpDatosVehiculo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -254,12 +272,194 @@
             this.cmbTransmision.Size = new System.Drawing.Size(220, 31);
             this.cmbTransmision.TabIndex = 17;
             // 
+            // picVehiculo
+            // 
+            this.picVehiculo.BackColor = System.Drawing.Color.White;
+            this.picVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picVehiculo.Location = new System.Drawing.Point(800, 80);
+            this.picVehiculo.Name = "picVehiculo";
+            this.picVehiculo.Size = new System.Drawing.Size(250, 160);
+            this.picVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVehiculo.TabIndex = 2;
+            this.picVehiculo.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(800, 250);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(250, 35);
+            this.btnFoto.TabIndex = 3;
+            this.btnFoto.Text = "Seleccionar foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(20, 310);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(130, 35);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(165, 310);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(130, 35);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(310, 310);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(130, 35);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(455, 310);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(130, 35);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 355);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(270, 23);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Buscar por placa, marca o modelo";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(450, 355);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(135, 23);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Tipo de vehículo";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(650, 355);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 23);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Transmisión";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(20, 380);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(300, 30);
+            this.txtBuscar.TabIndex = 11;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(330, 378);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(100, 32);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // cmbFiltroTipo
+            // 
+            this.cmbFiltroTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTipo.FormattingEnabled = true;
+            this.cmbFiltroTipo.Items.AddRange(new object[] {
+            "Todos",
+            "Sedán",
+            "SUV",
+            "Pickup"});
+            this.cmbFiltroTipo.Location = new System.Drawing.Point(450, 380);
+            this.cmbFiltroTipo.Name = "cmbFiltroTipo";
+            this.cmbFiltroTipo.Size = new System.Drawing.Size(180, 31);
+            this.cmbFiltroTipo.TabIndex = 13;
+            // 
+            // cmbFiltroTransmision
+            // 
+            this.cmbFiltroTransmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTransmision.FormattingEnabled = true;
+            this.cmbFiltroTransmision.Items.AddRange(new object[] {
+            "Todas",
+            "Mecánica",
+            "Automática"});
+            this.cmbFiltroTransmision.Location = new System.Drawing.Point(650, 380);
+            this.cmbFiltroTransmision.Name = "cmbFiltroTransmision";
+            this.cmbFiltroTransmision.Size = new System.Drawing.Size(180, 31);
+            this.cmbFiltroTransmision.TabIndex = 14;
+            // 
+            // btnMostrarTodos
+            // 
+            this.btnMostrarTodos.Location = new System.Drawing.Point(850, 378);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Size = new System.Drawing.Size(180, 32);
+            this.btnMostrarTodos.TabIndex = 15;
+            this.btnMostrarTodos.Text = "Mostrar todos";
+            this.btnMostrarTodos.UseVisualStyleBackColor = true;
+            // 
+            // dgvVehiculos
+            // 
+            this.dgvVehiculos.AllowUserToAddRows = false;
+            this.dgvVehiculos.AllowUserToDeleteRows = false;
+            this.dgvVehiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvVehiculos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehiculos.Location = new System.Drawing.Point(20, 425);
+            this.dgvVehiculos.MultiSelect = false;
+            this.dgvVehiculos.Name = "dgvVehiculos";
+            this.dgvVehiculos.ReadOnly = true;
+            this.dgvVehiculos.RowHeadersVisible = false;
+            this.dgvVehiculos.RowHeadersWidth = 51;
+            this.dgvVehiculos.RowTemplate.Height = 24;
+            this.dgvVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVehiculos.Size = new System.Drawing.Size(1030, 145);
+            this.dgvVehiculos.TabIndex = 16;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(20, 580);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(163, 23);
+            this.lblTotal.TabIndex = 17;
+            this.lblTotal.Text = "Total de vehículos: 0";
+            // 
             // frmVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1082, 603);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.dgvVehiculos);
+            this.Controls.Add(this.btnMostrarTodos);
+            this.Controls.Add(this.cmbFiltroTransmision);
+            this.Controls.Add(this.cmbFiltroTipo);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.picVehiculo);
             this.Controls.Add(this.grpDatosVehiculo);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -269,6 +469,8 @@
             this.Text = "Gestión de vehículos";
             this.grpDatosVehiculo.ResumeLayout(false);
             this.grpDatosVehiculo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +498,21 @@
         private System.Windows.Forms.ComboBox cmbTransmision;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.ComboBox cmbTipoVehiculo;
+        private System.Windows.Forms.PictureBox picVehiculo;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox cmbFiltroTipo;
+        private System.Windows.Forms.ComboBox cmbFiltroTransmision;
+        private System.Windows.Forms.Button btnMostrarTodos;
+        private System.Windows.Forms.DataGridView dgvVehiculos;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
