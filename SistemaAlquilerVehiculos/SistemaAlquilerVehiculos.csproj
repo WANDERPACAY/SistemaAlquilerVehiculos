@@ -184,6 +184,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGaleriaVehiculos.resx">
       <DependentUpon>frmGaleriaVehiculos.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
