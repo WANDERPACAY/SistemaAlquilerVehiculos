@@ -111,5 +111,15 @@ namespace SistemaAlquilerVehiculos
                 this.Close();
             }
         }
+
+        private void xdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galeriaVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioMdi<frmGaleriaVehiculos>();
+        }
     }
-}
+    }

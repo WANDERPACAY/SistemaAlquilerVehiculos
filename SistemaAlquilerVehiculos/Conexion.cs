@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.IO;
 using System.Data.SqlClient;
 
 namespace SistemaAlquilerVehiculos
@@ -9,21 +8,29 @@ namespace SistemaAlquilerVehiculos
     {
         public static SqlConnection ObtenerConexion()
         {
-            string dirBase = AppDomain.CurrentDomain.BaseDirectory;
+            string cadenaConexion =
+                Environment.GetEnvironmentVariable(
+                    "ALQUILER_VEHICULOS_CONEXION");
 
-            DirectoryInfo dir = new DirectoryInfo(dirBase);
-            if (dir.Name.Equals("Debug", StringComparison.OrdinalIgnoreCase) ||
-                dir.Name.Equals("Release", StringComparison.OrdinalIgnoreCase))
+            if (string.IsNullOrWhiteSpace(cadenaConexion))
             {
-                dirBase = dir.Parent.Parent.FullName;
+                ConnectionStringSettings configuracion =
+                    ConfigurationManager
+                        .ConnectionStrings["ConexionBD"];
+
+                if (configuracion == null ||
+                    string.IsNullOrWhiteSpace(
+                        configuracion.ConnectionString))
+                {
+                    throw new ConfigurationErrorsException(
+                        "No se encontró la conexión ConexionBD "
+                        + "en la configuración del programa.");
+                }
+
+                cadenaConexion = configuracion.ConnectionString;
             }
 
-            string rutaDb = Path.Combine(dirBase, "Database1.mdf");
-
-            string cadenaConexion = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={rutaDb};Integrated Security=True;Connect Timeout=30";
-
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
-            return conexion;
+            return new SqlConnection(cadenaConexion);
         }
     }
 }
