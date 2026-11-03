@@ -1,4 +1,4 @@
-﻿USE [SistemaAlquilerVehiculosPablo];
+﻿USE [SistemaAlquilerVehiculosInstalacionPrueba];
 GO
 
 -- Catálogo de departamentos.

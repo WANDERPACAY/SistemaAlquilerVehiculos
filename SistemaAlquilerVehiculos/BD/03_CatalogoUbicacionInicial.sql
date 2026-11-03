@@ -1,4 +1,4 @@
-﻿USE [SistemaAlquilerVehiculosPablo];
+﻿USE [SistemaAlquilerVehiculosInstalacionPrueba];
 GO
 
 SET XACT_ABORT ON;
