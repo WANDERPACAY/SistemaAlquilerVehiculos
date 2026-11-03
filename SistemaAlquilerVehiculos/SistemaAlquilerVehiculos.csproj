@@ -68,7 +68,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\ClienteDatos.cs" />
+    <Compile Include="Datos\UbicacionDatos.cs" />
     <Compile Include="Datos\VehiculoDatos.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="frmBitacora.cs">
       <SubType>Form</SubType>
@@ -148,10 +151,12 @@
     <Compile Include="frmVehiculos.Designer.cs">
       <DependentUpon>frmVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\ClienteLogica.cs" />
     <Compile Include="Logica\VehiculoLogica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sesion.cs" />
+    <Compile Include="Utilidades\FotosLicencias.cs" />
     <Compile Include="Utilidades\FotosVehiculos.cs" />
     <EmbeddedResource Include="frmBitacora.resx">
       <DependentUpon>frmBitacora.cs</DependentUpon>
